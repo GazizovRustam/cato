@@ -1,0 +1,141 @@
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --padding: 0.5rem;
+  --margin: 0.5rem;
+}
+
+html, body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  background: #000000;
+}
+
+.wrapper{
+  margin: 0px auto;
+  max-width: 1920px;
+  height: 100vh;
+  background: linear-gradient(90deg, #000000 14.66%, #002231 57.06%);
+}
+
+.header{
+  width: 100%;
+  padding: var(--padding)
+}
+
+.container-header{
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.header_body{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 80px;
+}
+
+.header_logo{
+  display: flex;
+  align-items: center;
+  flex: 0 0 200px;
+}
+
+.header_logo svg{
+  max-width: 100%;
+  display: block;
+}
+
+.header_burger{
+  display: none;
+}
+
+.header_menu{
+  width: auto;
+}
+
+.header_list{
+  display: flex;
+}
+
+.header_list li{
+  list-style: none;
+  /* text-transform: uppercase; */
+  margin: 0 0 0 calc(var(--margin) * 6);
+  color: white;
+  
+}
+
+.container-phone,
+.container-mail{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-phone img,
+.container-mail img{
+  padding: 0 var(--padding) 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .header_burger{
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .header_burger span{
+    position: absolute;
+    background-color: rgba(5, 155, 132, 1);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+  }
+  .header_burger:before,
+  .header_burger:after{
+    content: '';
+    background-color:  rgba(5, 155, 132, 1);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .header_burger:before{
+    top: 0;
+  }
+  .header_burger:after{
+    bottom: 0;
+  }
+
+  .header_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 100px 0 0 0;
+
+    background: linear-gradient(90deg, #000000 14.66%, #002231 57.06%);
+  }
+
+  .header_list{
+    display: block;
+  }
+
+  .header_list li{
+    margin: var(--margin) 0 calc(var(--padding) * 4) calc(var(--padding) * 9);
+  }
+
+}
+
+
