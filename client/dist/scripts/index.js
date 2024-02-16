@@ -1,9 +1,16 @@
+
 function changeStateBurgerButton(){
+  
+  const burgerButton = document.getElementById('burger_button');
+  const headerBurger = document.querySelectorAll('.header_burger, .header_menu');  
+  const body = document.querySelector('body');
+
   document.addEventListener('DOMContentLoaded', () =>{
-    const burgerButton = document.getElementById('burger_button');
     burgerButton.addEventListener('click', (e) => {
-      const headerBurger = document.querySelectorAll('.header_burger');      
-        headerBurger.classList.toggle('active');
+        headerBurger.forEach((element) => {
+          element.classList.toggle('active')
+        });
+      body.classList.toggle('lock');
     });
   });
 };
