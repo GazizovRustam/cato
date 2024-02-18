@@ -26,6 +26,13 @@
 	font-style: normal;
 }
 
+a:active,
+a:hover,
+a{
+  text-decoration: none;
+  color: white;
+}
+
 html, body{
   /* font-family: 'Roboto', sans-serif; */
   font-family: 'TildaSansRegular', 'sans-serif';
@@ -36,6 +43,7 @@ html, body{
   
   height: 100%;
   background: #000000;
+  color: #FFFFFF;
 }
 
 .wrapper{
@@ -69,10 +77,9 @@ html, body{
   width: auto;
   height: 70px;
   
-  /* background: linear-gradient(90deg, rgba(255, 0, 0, 0.715), rgba(0, 0, 0, 0)); */
-  /* background: linear-gradient(90deg, #000000 14.66%, #002231 57.06%); */
-  background: rgb(0, 0, 0);
-  /* backdrop-filter: blur(30%); */
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 3.39%, rgba(0, 0, 0, 0.8) 18.27%, rgba(0, 0, 0, 0.32) 24.09%, rgba(0, 0, 0, 0.32) 100%);
+  backdrop-filter: blur(16.5px);
+  border-radius: 0px 0px 5px 5px;
 }
 
 .header_logo{
@@ -107,8 +114,6 @@ html, body{
   list-style: none;
   /* text-transform: uppercase; */
   margin: 0 0 0 calc(var(--rem05) * 3.8);
-  color: white;
-  
 }
 
 .container_phone,
@@ -135,10 +140,7 @@ html, body{
   max-width: var(--width_1152);
   height: 100%;
   margin: 0px auto;
-  color: white;
   padding: 0 0 0 calc(var(--rem05) * 6.6);
-
-  /* border: 1px solid palevioletred; */
 }
 
 .content_cato{
@@ -160,8 +162,6 @@ html, body{
   font-weight: 900;
   font-size: 53px;
   line-height: 64px;
-
-  color: #FFFFFF;
 }
 
 .content_cato .pic_cato{
@@ -213,46 +213,51 @@ html, body{
   height: 15px;
 }
 
-.content_products{
+.content_products,
+.content_about,
+.content_trust,
+.content_contacts{
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 1080px;
-
   
-
   border: 1px solid red;
 }
 
-.content_products .pic_glasses{
-position: absolute;
-width: 988px;
-height: 919px;
-left: 1001px;
-top: 1061px;
-
-background: no-repeat url("../../public/logo/foto_E\ 2.png");
-opacity: 0.9;
-overflow: hidden;
+#products, 
+#about{
+  /* padding-top: 100px */
 }
 
-.content_products span{
+.style_card_title{
   display: flex;
-  align-items: center;
-
-  width: 205px;
-  height: 51px;
-  left: 0px;
-  top: 1080px;
+  align-items: center; 
   background: var(--background_green);
   
   font-family: 'TildaSans-Black', 'sans-serif';
   font-weight: 900;
   font-size: 42px;
-  
 }
 
+.content_products span{
+  width: 205px;
+  height: 51px;  
+}
+
+.pic_glasses{
+  position: absolute;
+  max-width: 988px;
+  max-height: 919px;
+  right: 0px;
+  top: 1060px;
+  opacity: 0.9;
+}
+
+
 .content_products .cards_product{
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -263,8 +268,7 @@ overflow: hidden;
 
 .content_products .cards_product .cards_product_title{
   width: max-content;
-  
-  font-family: 'Tilda Sans';
+  font-family: 'TildaSans-Black', 'sans-serif';
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -272,25 +276,195 @@ overflow: hidden;
   padding: calc(var(--rem05) * 5.2) 0 0 0;
 }
 
-.card_product{
+.card_product_1{
+  position: absolute;
+  left: 365px;
+  top: 65px;
+}
+
+.card_product_2{
+  position: absolute;
+  left: 730px;
+  top: 65px;
+}
+
+.card_product_3{
+  position: absolute;
+  left: 0px;
+  top: 425px;
+}
+
+.card_product_4{
+  position: absolute;
+  left: 365px;
+  top: 425px;
+}
+
+.card_product_5{
+  position: absolute;
+  left: 730px;
+  top: 425px;
+}
+
+.style_card{
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-
-  /* position: absolute; */
-  width: 300px;
-  height: 300px;
-
-
   background: rgba(5, 155, 132, 0.3);
   box-shadow: -9px 9px 22px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(6px);
 
   border-radius: 5px;
+}
+
+.card_product_title{
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 calc(var(--rem05) * 2) 0;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
   
 }
+
+.card_product_1 .pic_card_system{
+  width: 221px;
+  height: 174.43px;
+}
+
+.content_about span{
+width: 251px;
+height: 51px;
+}
+
+.content_about_title{
+  width: 1032px;
+  font-family: "Inter", sans-serif;
+}
+
+.content_about p{
+  padding: 40px 0 0 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.card_about{
+  position: relative;
+  margin: calc(var(--rem05) * 7) 0 0 0;
+  
+  height: 250px;
+}
+
+.card_about .diplom{
+  position: absolute;
+  left: 80px;
+  top: 0px;
+  
+  filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
+}
+
+.card_about .sertifikat{
+position: absolute;
+left: 335px;
+top: 0px;
+filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
+}
+
+.card_about .gramota{
+  position: absolute;
+  left: 735px;
+  top: 0px;
+  filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
+}
+
+.content_trust span{
+  width: 297px;
+  height: 51px;
+}
+
+.content_trust p{
+  padding:calc(var(--rem05) * 2) 0 0 0;
+
+  width: 306px;
+  height: 29px;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.content_icon{
+  display: grid;
+  padding: calc(var(--rem05) * 5) 0 0 0;
+  grid-template: repeat(5, 115px) / repeat(4, 265px)
+}
+
+.conteiner_icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+}
+
+.content_map{
+  position: relative;
+}
+
+.icon_map{
+  position: absolute;
+  top: -80px;
+  left: 80px;
+}
+
+.content_contacts{
+  padding: calc(var(--rem05) * 32) 0 0 0;
+}
+
+.content_contacts p{
+width: 205px;
+height: 51px;
+}
+
+.content_contacts ul {
+  /* padding: calc(var(--rem05) * 2) 0 0 0; */
+}
+
+.content_contacts ul li{
+  width: max-content;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--rem05) * 5) 0 0 0;
+
+  /* Санкт-Петербург, набережная реки Фонтанки 113 */
+
+
+
+  font-family: 'TildaSansRegular', 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  }
+
+  .content_contacts span{
+    padding: 0 0 0 calc(var(--rem05) * 2);
+  }
+
+
 
 
 
@@ -307,8 +481,7 @@ overflow: hidden;
 }
 
 
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1152px) {
   .header_burger{
     display: block;
     position: fixed;
