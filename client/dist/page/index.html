@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Цато</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">  
   <script src="../../dist/scripts/index.js"  defer></script>
 
 </head>
@@ -17,6 +14,7 @@
         <div class="container_header">
           <div class="header_body">
               <div class="header_logo">
+                <a href="#">
                 <svg xml:space="preserve" width="6.1424198cm" height="2.1065099cm" version="1.1" style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" viewBox="0 0 8142.4198 2106.5099" id="svg83" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
                   <defs>
                     <lineargradient id="catoColor10">
@@ -80,6 +78,7 @@
                     <rect id="rect80" fill="url(#catoColor3)" x="7520.8198" y="13035.04" width="267.35001" height="267.35001"/>
                   </g>
                 </svg>
+              </a>
               </div>
               <div id="burger_button" class="header_burger">
                 <span></span>
@@ -88,17 +87,17 @@
                 <ul class="header_list">
                   <li><a href="#products">Продукты</a></li>
                   <li><a href="#about">О компании</a></li>
-                  <li>Контакты</li>
+                  <li> <a href="#contacts">Контакты</a></li>
                   <li>
-                    <div class="container_phone">                      
+                    <div class="container_header_phone">                      
                       <img src="../../public/logo/pic_phone.svg" alt="pic_phone">                                  
-                      <span>+7(931) 348-89-60</span>
+                      <a href="tel:+7(931) 348-89-60">+7(931) 348-89-60</a>
                     </div>
                   </li>
                   <li>
                     <div class="container_mail">                      
                       <img src="../../public/logo/pic_mail.svg" alt="pic_mail">                                  
-                      <span>ooo-cato@mail.ru</span>
+                      <a href="mailto://ooo-cato@mail.ru">ooo-cato@mail.ru</a>
                     </div>
                   </li>
                 </ul>
@@ -113,28 +112,27 @@
               <span>Центр <br> Автоматизации <br> Технического <br> Обслуживания</span>
               <img class="pic_cato" src="../../public/logo/pic_cato.png" alt="pic_cato">
               <div class="container_cato_btn">
-                <button>
-                  <p>Каталог "Курсы"</p>
-                  <div>
-                    <img class="pic_button_download" src="../../public/logo/pic-button-download.svg" alt="pic_button_download">
-                  </div>
-                </button>
-                <button>
-                  <p>Каталог "Тренажеры"</p> 
+                <a class="button" href="/client/public/files/doc.txt" download>
+                  <p>Каталог «Курсы»</p> 
                   <img class="pic_button_download" src="../../public/logo/pic-button-download.svg" alt="pic_button_download">
-                </button>
+                </a>
+                <a class="button" href="/client/public/files/doc.txt" download>
+                  <p>Каталог «Тренажеры»</p> 
+                  <img class="pic_button_download" src="../../public/logo/pic-button-download.svg" alt="pic_button_download">
+                </a>
               </div>
             </div>
             <div class="content_products">
               <div id="products"></div>
-              <span class="style_card_title">Продукты</span>
-              
+              <div class="container_style_card_title">
+                <span class="style_card_title">Продукты</span>              
                 <img class="pic_glasses" src="../../public/logo/pic_glassis.svg" alt="pic_glassis">
+              </div>
                 <div class="cards_product">
                   <div class="cards_product_title">
                     В наших продуктах мы <br> применяем новейшие <br> технологии <br> в области WEB,<br> 3D графики и VR
                   </div>
-                  <div class="card_product_1 style_card">
+                  <div class="card_product_1 style_card card_product_all">
                     <div class="card_product_title">
                       <p>Автоматизированные</p>
                       <p>системы</p>
@@ -143,7 +141,7 @@
                       <img src="../../public/logo/pic_card_system.png" alt="pic_card_system.png">
                     </div>
                   </div>
-                  <div class="card_product_2 style_card">
+                  <div class="card_product_2 style_card card_product_all">
                     <div class="card_product_title">
                       <p>Электронные</p>
                       <p>курсы</p>
@@ -152,7 +150,7 @@
                       <img src="../../public/logo/Laptop 1.png" alt="pic_card_system.png">
                     </div>
                   </div>
-                  <div class="card_product_3 style_card">
+                  <div class="card_product_3 style_card card_product_all">
                     <div class="card_product_title">
                       <p>Программные</p>
                       <p>тренажеры</p>
@@ -161,7 +159,7 @@
                       <img src="../../public/logo/monik_2 1.png" alt="pic_card_system.png">
                     </div>
                   </div>
-                  <div class="card_product_4 style_card">
+                  <div class="card_product_4 style_card card_product_all">
                     <div class="card_product_title">
                       <p>Программер-аппаратные</p>
                       <p>тренажеры</p>
@@ -170,7 +168,7 @@
                       <img src="../../public/logo/work_Stend-2 1.png" alt="pic_card_system.png">
                     </div>
                   </div>
-                  <div class="card_product_5 style_card">
+                  <div class="card_product_5 style_card card_product_all">
                     <div class="card_product_title">
                       <p>Аппаратные</p>
                       <p>тренажеры</p>
@@ -183,8 +181,9 @@
               
             </div>
             <div class="content_about">
-              <div id="about" ></div>
+              <div id="about"></div>
               <span class="style_card_title">О компании</span>
+              <img class="pic_cato_back_left_1" src="../../public/logo/cato_back_left.svg" alt="cato_back_left">
               <div class="content_about_title">
                 <p>
                   Центр автоматизации технического обслуживания (ЦАТО) был основан в 2011 г. в городе Санкт-Петербурге. Мы специализируемся на разработке производственных обучающих платформ, в которые интегрируем программные и аппаратные тренажеры, электронные обучающие курсы.
@@ -276,33 +275,35 @@
             <div class="content_contacts">
               <div id="contacts" ></div>
               <p class="style_card_title">Контакты</p>
-              <ul>
+              <img class="pic_cato_back_left_2" src="../../public/logo/cato_back_left.svg" alt="cato_back_left">
+              <ul class="content_message">
                 <li>
                   <img src="../../public/logo/Vector.svg" alt="vector">
                   <span>Санкт-Петербург, набережная реки Фонтанки 113</span>
                 </li>
-                <li>
-                  <img src="../../public/logo/phone.svg" alt="">
+                <li class="container_phone">
+                  <img src="../../public/logo/phone.svg" alt="phone">
                   <span>
-                    +7 (931) 348-89-60, +7 (812) 457-89-40
+                    <p>+7 (931) 348-89-60,</p>
+                    <p>+7 (812) 457-89-40</p> 
                   </span>
                 </li>
                 <li>
-                  <img src="../../public/logo/telegram.svg" alt="">
+                  <img src="../../public/logo/telegram.svg" alt="tel">
                   <span>
-                    <a href="#">Telegram</a>
+                    <a  href="https://t.me/aoc_sh" target="_blank">Telegram</a>
                   </span>
                 </li>
                 <li>
-                  <img src="../../public/logo/pic_phone.svg" alt="">
+                  <img src="../../public/logo/pic_phone.svg" alt="phone">
                   <span>
-                    <a href="">WhatsApp</a>
+                    <a href="https://api.whatsapp.com/send?phone=9313488960" target="_blank">WhatsApp</a>
                   </span>                                    
                 </li>
                 <li>
-                  <img src="../../public/logo/pic_mail.svg" alt="">
+                  <img src="../../public/logo/pic_mail.svg" alt="mail">
                   <span>
-                    ooo-cato@mail.ru
+                    <a href="mailto://ooo-cato@mail.ru">ooo-cato@mail.ru</a>
                   </span>
                 </li>
               </ul>
@@ -311,7 +312,9 @@
         </div>
       </main>
       <footer class="footer">
-        
+        <div class="container_footer">
+          <p>© 2024 ЦАТО.РФ</p>
+      </div>
       </footer>
     </div>
 </body>

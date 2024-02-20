@@ -26,15 +26,28 @@
 	font-style: normal;
 }
 
-a:active,
-a:hover,
-a{
+@font-face {
+	font-family: 'TildaSans-Medium';
+	src: url('../fonts/TildaSans-Medium.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.header_menu a:active,
+.header_menu a:hover,
+.header_menu a{
   text-decoration: none;
   color: white;
 }
 
+.content_message a:active,
+.content_message a:hover,
+.content_message a{
+  color: white;
+}
+
+
 html, body{
-  /* font-family: 'Roboto', sans-serif; */
   font-family: 'TildaSansRegular', 'sans-serif';
   font-style: normal;
   font-weight: 400;
@@ -87,7 +100,7 @@ html, body{
   top: 0;
   display: flex;
   align-items: center;
-  flex: 0 0 210px;
+  flex: 0 0 200px;
 }
 
 .header_logo svg{
@@ -101,7 +114,7 @@ html, body{
 
 .header_menu{
   position: absolute;
-  right: calc(var(--rem05) * 5.5);
+  right: calc(var(--rem05) * 6.5);
   width: auto;
   
 }
@@ -115,14 +128,14 @@ html, body{
   margin: 0 0 0 calc(var(--rem05) * 3.8);
 }
 
-.container_phone,
+.container_header_phone,
 .container_mail{
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.container_phone img,
+.container_header_phone img,
 .container_mail img{
   margin: 0 var(--rem05) 0 0;
 }
@@ -139,7 +152,7 @@ html, body{
   max-width: var(--width_1152);
   height: 100%;
   margin: 0px auto;
-  padding: 0 0 0 calc(var(--rem05) * 6.6);
+  padding: 0 0 0 calc(var(--rem05) * 6.1);
 }
 
 .container_img_1920{
@@ -154,8 +167,32 @@ html, body{
   max-width: 988px;
   max-height: 919px;
   right: 0px;
-  top: 1055px;
+  top: 1155px;
   opacity: 0.9;
+}
+
+.pic_cato_back_left_1{
+  position: absolute;
+  width: 621.01px;
+  height: 374.59px;
+  left: 35px;
+  top: 2190px;
+  
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.pic_cato_back_left_2{
+  position: absolute;
+  width: 621.01px;
+  height: 374.59px;
+  left: 40px;
+  top: 4350px;
+  
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
 }
 
 
@@ -200,8 +237,11 @@ html, body{
   height: 120px;
   z-index: 100;
 } 
+.container_cato_btn a{
+  text-decoration: none;
+}
 
-.container_cato_btn button{
+.container_cato_btn .button{
   position: relative;
   display: flex;
   align-items: center;
@@ -216,7 +256,8 @@ html, body{
   background: var(--background_green);
 }
 
-.container_cato_btn button p {
+.container_cato_btn .button p {
+  text-wrap: nowrap;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -233,29 +274,29 @@ html, body{
 .content_about,
 .content_trust,
 .content_contacts{
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 1080px;
-  
-  border: 1px solid red;
 }
 
 #products, 
 #about{
-  /* padding-top: 100px */
+  padding: 100px 0 0 0;
 }
 
 
 .style_card_title{
   display: flex;
   align-items: center; 
+  justify-content: center;
   background: var(--background_green);
   
   font-family: 'TildaSans-Black', 'sans-serif';
+  font-style: normal;
   font-weight: 900;
-  font-size: 42px;
+  font-size: 40px;
+  line-height: 48px;
 }
 
 .content_products span{
@@ -269,6 +310,7 @@ html, body{
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  z-index: 50;
 }
 
 .content_products .cards_product .cards_product_title{
@@ -292,7 +334,6 @@ html, body{
   left: 730px;
   top: 65px;
 }
-
 .card_product_3{
   position: absolute;
   left: 0px;
@@ -312,20 +353,38 @@ html, body{
 }
 
 .style_card{
+  
   width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(37, 201, 177, 0.3);
+  background: rgba(5, 155, 132, 0.3);
   box-shadow: -9px 9px 22px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(6px);
-  border: 5px solid transparent;
-  border: 3px solid rgba(21,69,107,100);
-  border-radius: 5px;
- 
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));  
+  border-radius: 6px;
+  
 }
+
+.style_card:before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px; 
+  padding: 3px; 
+  
+  background:linear-gradient(45deg,  rgba(0, 0, 0, 0),  rgba(38, 133, 166, 0.5) ); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  backdrop-filter: blur(10px);
+}
+
+
 
 
 .card_product_title{
@@ -336,12 +395,11 @@ html, body{
   align-items: center;
   padding: 0 0 calc(var(--rem05) * 2) 0;
 
-  font-family: "Inter", sans-serif;
+  font-family: "TildaSans-Medium", sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 22px;
   line-height: 26px;
-  
 }
 
 .card_product_1 .pic_card_system{
@@ -356,25 +414,25 @@ height: 51px;
 
 .content_about_title{
   width: 1032px;
-  font-family: "Inter", sans-serif;
+  font-family: "TildaSans-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 26px;
 }
 
 .content_about p{
   padding: 40px 0 0 0;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 27px;
 }
 
 .card_about{
   position: relative;
-  margin: calc(var(--rem05) * 7) 0 0 0;
+  margin: calc(var(--rem05) * 1.5) 0 0 0;
   
   height: 250px;
 }
 
-.card_about .diplom{
+.diplom{
   position: absolute;
   left: 80px;
   top: 0px;
@@ -382,14 +440,14 @@ height: 51px;
   filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
 }
 
-.card_about .sertifikat{
+.sertifikat{
 position: absolute;
 left: 335px;
 top: 0px;
 filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
 }
 
-.card_about .gramota{
+.gramota{
   position: absolute;
   left: 735px;
   top: 0px;
@@ -438,28 +496,35 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
 }
 
 .content_contacts{
+  height: max-content;
   padding: calc(var(--rem05) * 32) 0 0 0;
 }
 
+.content_contacts span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0 0 calc(var(--rem05) * 2);
+}
+
 .content_contacts p{
-width: 205px;
-height: 51px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  padding: 0 var(--rem05) 0 0 ;
 }
 
 .content_contacts ul {
-  /* padding: calc(var(--rem05) * 2) 0 0 0; */
+  width: 100%;
+  height: 100%;
 }
 
 .content_contacts ul li{
-  width: max-content;
   height: 32px;
   display: flex;
   align-items: center;
   padding: calc(var(--rem05) * 5) 0 0 0;
-
-  /* Санкт-Петербург, набережная реки Фонтанки 113 */
-
-
 
   font-family: 'TildaSansRegular', 'sans-serif';
   font-style: normal;
@@ -468,32 +533,52 @@ height: 51px;
   line-height: 29px;
   }
 
-  .content_contacts span{
-    padding: 0 0 0 calc(var(--rem05) * 2);
-  }
-
-
-
-
-
-
-
-
-
-.footer{
-  max-width: var(--width_1152);
-  margin: 70px auto 0;
-  color: white;
   
-  border: 1px solid;
+.footer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 70px 0 0 0;
 }
 
+.container_footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  max-width: var(--width_1152);
+  padding: calc(var(--rem05) * 30) 0 calc(var(--rem05) * 12.5) 0;
+
+  font-family: 'TildaSansRegular', 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
 
 @media screen and (max-width: 1152px) {
+
+  .pic_cato_back_left_1,
+  .pic_cato_back_left_2,
+  .content_map{
+    display: none;
+  }
+
+  .header_body.active{
+    background: linear-gradient(90deg, #000000 14.66%, #002231 57.06%);
+  }
+
+  .header_logo{
+    padding: 0 0 0 var(--rem05);
+    flex: 0 0 210px;
+  }
+
   .header_burger{
     display: block;
     position: fixed;
-    right: calc(var(--rem05) * 4);
+    right: calc(var(--rem05) * 2.2);
     width: 38px;
     height: 30px;
 
@@ -543,13 +628,12 @@ height: 51px;
   .header_menu{
     display: none;
     position: fixed;
-    top: 0;
+    top: 69px;
     right: 0;
     width: 100%;
-    height: 100%;
-    margin: 80px 0 0 0;
-    
-
+    height: 100vh;
+    overflow: auto;
+  
     background: linear-gradient(90deg, #000000 14.66%, #002231 57.06%);
   }
 
@@ -578,7 +662,7 @@ height: 51px;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
 
   .content_cato span{
@@ -586,7 +670,7 @@ height: 51px;
     width: 100%;
     font-size: 32px;
     line-height: 38px;
-    padding: 0 0 0 calc(var(--rem05) * 7)
+    padding: calc(var(--rem05) * 3) 0 0 calc(var(--rem05) * 6);
   }
 
   .content_cato .pic_cato{
@@ -605,6 +689,145 @@ height: 51px;
     width: 100%;
     
   }
+
+  .pic_glasses,
+  .content_products .cards_product,
+  .card_product_1,
+  .card_product_2,
+  .card_product_3,
+  .card_product_4,
+  .card_product_5,
+  .card_about,
+  .diplom,
+  .sertifikat,
+  .gramota
+  {
+    position: unset;
+    
+  }
+
+.content_products,
+.content_about,
+.content_trust,
+.content_contacts{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.content_products{
+  margin: calc(var(--rem05) * 10) 0 0 0;
+}
+
+  .content_about{
+    width: 100%;
+    height: max-content;
+  }
+
+  .card_about{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: calc(var(--rem05) * 7) 0 0 0;
+
+  }
+
+  .card_about .diplom, .gramota{
+    width: 50%;
+  }
+
+  .card_about .sertifikat{
+    width: 90%;
+  }
+
+ .content_about_title{
+    width: 100%;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 29px;
+ }
+
+ .content_about p {
+  padding: calc(var(--rem05) * 4) 0 0 0;
+ }
+
+ .content_trust{
+  margin: calc(var(--rem05) * 4.5)  0 0 0 ;
+ }
+  
+ .content_icon{
+  /* display: grid;
+  grid-template: repeat(10, 1fr) / repeat(2, 1fr); */
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+ }
+
+ .conteiner_icon{
+  width: 50%;
+  height: 70px;
+  margin: 0 0 calc(var(--rem05) * 2) 0;
+ }
+
+ .content_icon img{
+  width: 100%;
+  height: 60%;
+ }
+
+ .content_message span{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+ }
+
+
+ .container_style_card_title{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+ }
+
+ .pic_glasses{
+  position: absolute;
+  width: 255px;
+  height: 268px;
+  top: -25px;
+  right: -6px;
+  z-index: 10;
+ }
+ .content_products .cards_product{
+
+ }
+
+ .content_products .cards_product .cards_product_title{
+  padding: calc(var(--rem05) * 3 ) 0 calc(var(--rem05) * 4) 0;
+  font-family: 'TildaSansRegular', 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+ }
+
+ .cards_product .card_product_all{
+  margin: 0px auto calc(var(--rem05) * 4.5);
+ }
+
+ .content_contacts{
+  padding: calc(var(--rem05) * 3) 0 0 0;
+ }
+
+ .content_contacts .container_phone{
+  padding: calc(var(--rem05) * 7) 0 0 0;
+}
+
+ .container_footer{
+  padding: calc(var(--rem05) * 15) 0 calc(var(--rem05) * 3.5) 0;
+ }
 
 }
 
