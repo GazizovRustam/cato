@@ -393,7 +393,6 @@ html, body{
   backdrop-filter: blur(10px);
 }
 
-
 .card_product_title{
   width: max-content;
   display: flex;
