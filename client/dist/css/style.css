@@ -337,7 +337,8 @@ html, body{
   z-index: 150;
 }
 
-.content_products span{
+.content_products span, 
+.content_contacts span{
   width: 205px;
   height: 51px;  
 }
@@ -554,8 +555,6 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
 .content_contacts .style_card_title{
   display: flex;
   align-items: center;
-  width: max-content;
-  height: max-content;
   padding: 0 var(--rem05) 0 var(--rem05);
 }
 
@@ -897,16 +896,9 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
   padding: calc(var(--rem05) * 3) 0 0 0;
  }
 
- /* .content_contacts .container_phone{
-  padding: calc(var(--rem05) * 7) 0 0 0;
-} */
   .content_message_style{
     height: auto;
   }
-
- .container_footer{
-  padding: calc(var(--rem05) * 5) 0 calc(var(--rem05) * 3.5) 0;
- }
 
 }
 
