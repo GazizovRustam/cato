@@ -8,7 +8,7 @@
 :root{
   --rem05: 0.5rem;
   --width_1152: 1152px;
-  --height_container: 1080px;
+  --height_container: 700px;
   --background_green: #059B84;
   --background_burger:  
     rgba(5, 155, 132, 1) 0%, 
@@ -61,7 +61,6 @@
   color: white;
 }
 
-
 html, body{
   font-family: 'TildaSansRegular', 'sans-serif';
   font-style: normal;
@@ -110,12 +109,9 @@ html, body{
 
   
   background: linear-gradient(90deg, 
-    rgba(12, 12, 12, 0.8) 3.39%, 
-    rgba(0, 0, 0, 0.8) 18.27%, 
-    rgba(0, 0, 0, 0.32) 24.09%, 
-    
-  /* rgba(0, 0, 0, 0.8) 140px, 
-  rgba(0, 0, 0, 0.32) 200px,  */
+    rgba(12, 12, 12, 0.8) 3.39%,
+    rgba(0, 0, 0, 0.8) 210px, 
+    rgba(0, 0, 0, 0.32) 260px, 
     rgba(0, 0, 0, 0.32) 100%);
   border-radius: 0px 0px 5px 5px;
   -webkit-backdrop-filter: blur(16.5px);
@@ -129,6 +125,49 @@ html, body{
   display: flex;
   align-items: center;
   flex: 0 0 200px;
+}
+
+@keyframes catoGradient {
+  0% {
+    stop-color: #15456B;
+  }
+  25% {
+    stop-color: #08657D;
+  }
+  50% {
+    stop-color: #059B84;
+  }
+  75% {
+    stop-color: #08657D;
+  }
+  100% {
+    stop-color: #15456B;
+  }
+}
+
+#catoColor10 stop {
+  animation: catoGradient 10s infinite;
+}
+#catoColor9 stop {
+  animation: catoGradient 9s infinite;
+}
+#catoColor8 stop {
+  animation: catoGradient 8s infinite;
+}
+#catoColor7 stop{
+  animation: catoGradient 7s infinite;
+}
+#catoColor6 stop{
+  animation: catoGradient 6s infinite;
+}
+#catoColor5 stop{
+  animation: catoGradient 5s infinite;
+}
+#catoColor4 stop{
+  animation: catoGradient 4s infinite;
+}
+#catoColor3 stop{
+  animation: catoGradient 3s infinite;
 }
 
 .header_logo svg{
@@ -196,7 +235,7 @@ html, body{
   max-width: 988px;
   max-height: 919px;
   right: 0px;
-  top: 1155px;
+  top: 770px;
   opacity: 0.9;
 }
 
@@ -205,7 +244,7 @@ html, body{
   width: 621.01px;
   height: 374.59px;
   left: 35px;
-  top: 2190px;
+  top: 2280px;
   mix-blend-mode: normal;
   opacity: 0.5;
   z-index: 0;
@@ -216,9 +255,8 @@ html, body{
   width: 621.01px;
   height: 374.59px;
   left: 40px;
-  top: 4130px;
+  top: 3970px;
   
-
   mix-blend-mode: normal;
   opacity: 0.5;
   z-index: 0;
@@ -308,9 +346,7 @@ html, body{
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 1080px;
-
-  /* border: 1px solid green; */
+  min-height: var(--height_container);
 }
 
 #products, 
@@ -337,18 +373,22 @@ html, body{
   z-index: 150;
 }
 
-.content_products span, 
+.content_products span,
+.content_about span,
+.content_trust span,
 .content_contacts span{
-  width: 205px;
-  height: 51px;  
+  width: max-content;
+  min-height: 51px;
+  padding: 0 var(--rem05) 0 var(--rem05);   
 }
 
 .content_products .cards_product{
   position: relative;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   width: 100%;
+  height: 800px;
   z-index: 50;
 }
 
@@ -446,11 +486,6 @@ html, body{
   height: 174.43px;
 }
 
-.content_about span{
-width: 251px;
-height: 51px;
-}
-
 .content_about_title{
   width: 1032px;
   font-style: normal;
@@ -467,7 +502,6 @@ height: 51px;
 .card_about{
   position: relative;
   margin: calc(var(--rem05) * 12) 0 0 0;
-  
   height: 250px;
 }
 
@@ -503,10 +537,9 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
   top: 0px;
   filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
 }
-
-.content_trust span{
-  width: 297px;
-  height: 51px;
+.content_trust{
+  position: relative;
+  z-index: 50;
 }
 
 .content_trust p{
@@ -537,6 +570,7 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
 
 .content_map{
   position: relative;
+  height: 400px;
 }
 
 .icon_map{
@@ -590,7 +624,6 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  /* padding: 0 0 0 calc(var(--rem05) * 2); */
 }
 
 .content_contacts p{
@@ -608,7 +641,7 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
   
 .footer{
   width: 100%;
-  height: 50vh;
+  height: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -798,10 +831,14 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
   margin: calc(var(--rem05) * 10) 0 0 0;
 }
 
+
 .content_about{
   margin: calc(var(--rem05) * 5) 0 0 0;
 }
 
+.content_products .cards_product{
+  height: 100%;
+}
 
   .card_about{
     width: 100%;
@@ -867,14 +904,12 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
 
  .pic_glasses{
   position: absolute;
-  width: 255px;
-  height: 268px;
+  /* width: 255px; */
+  width: calc((100vw)/(50 - 30) * (13.5 - 1) + 1px);
+  /* height: 268px; */
   top: -25px;
   right: -6px;
   z-index: 10;
- }
- .content_products .cards_product{
-
  }
 
  .content_products .cards_product .cards_product_title{
@@ -889,10 +924,6 @@ filter: drop-shadow(-9px 9px 22px rgba(0, 0, 0, 0.25));
  .cards_product .card_product_all{
   margin: 0px auto calc(var(--rem05) * 4.5);
  }
-
- /* .content_contacts{
-  padding: calc(var(--rem05) * 3) 0 0 0;
- } */
 
   .content_message_style{
     height: auto;
