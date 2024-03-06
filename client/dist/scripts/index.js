@@ -1,6 +1,7 @@
 
 function changeStateBurgerButton(){
   
+  const headerLogo = document.getElementById('header_logo');
   const burgerButton = document.getElementById('burger_button');
   const headerBurger = document.querySelectorAll('.header_burger, .header_menu');
   const headerBody = document.querySelector('.header_body');
@@ -18,17 +19,26 @@ function changeStateBurgerButton(){
       headerBody.classList.toggle('active')
     });
 
+    headerLogo.addEventListener('click', (e) => {
+      removeClass();
+    });
+
 
     headerList.forEach((e) => {
       e.addEventListener('click', () => {
-        headerBurger.forEach((el) => {
-          el.classList.remove('active');
-          body.classList.remove('lock');
-          headerBody.classList.remove('active');
-        })
+        removeClass();
       });
     });
 
   });
+
+  function removeClass(){
+    headerBurger.forEach((el) => {
+      el.classList.remove('active');
+      body.classList.remove('lock');
+      headerBody.classList.remove('active');
+    })
+  }
+
 };
 changeStateBurgerButton();

@@ -61,6 +61,11 @@
   color: white;
 }
 
+html{
+  scroll-behavior: smooth;
+
+}
+
 html, body{
   font-family: 'TildaSansRegular', 'sans-serif';
   font-style: normal;
